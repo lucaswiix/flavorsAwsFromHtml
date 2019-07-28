@@ -14,7 +14,7 @@ $( document ).ready(function(){
             data.push(jsn);
     }
     // console.log(data);
-    var sql = "INSERT INTO flavorsAws (name, vCPU, memoryGB, 'price', 'OsType') VALUES ";
+    var sql = "INSERT INTO flavorsAws ('name', 'vCPU', 'memory', 'price', 'osType') VALUES ";
     data.forEach( function(x, index) {
         sql+="('"+x.name+"', ";
         sql+="'"+x.vCPU+"', ";
