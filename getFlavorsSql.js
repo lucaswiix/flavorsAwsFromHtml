@@ -9,12 +9,12 @@ $( document ).ready(function(){
                 vCPU: td[2].getElementsByTagName('div')[0].innerHTML.replace('&nbsp;', ''),
                 Memory: parseFloat(td[3].getElementsByTagName('div')[0].innerHTML.replace('&nbsp;', ''))*1000,
                 price: td[6].getElementsByTagName('div')[0].innerHTML.replace('&nbsp;&nbsp;&nbsp;', '').replace('$', '').replace('&nbsp;&nbsp;', ''),
-                OsType: 'linux'
+                OsType: 'windows'
             };
             data.push(jsn);
     }
     // console.log(data);
-    var sql = "INSERT INTO flavorsws (name, vCPU, memory, price, versionDate, osType) VALUES ";
+    var sql = "INSERT INTO flavorsaws (name, vCPU, memory, price, versionDate, osType) VALUES ";
     data.forEach( function(x, index) {
         sql+="('"+x.name+"', ";
         sql+="'"+x.vCPU+"', ";
